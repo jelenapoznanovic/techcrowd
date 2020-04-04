@@ -28,7 +28,7 @@
 - With [yarn]: `yarn install`
 - Development: `npm run dev`
 - Build for production: `npm run build`
-- Remove the `dist` folder: `npm run clean`
+- Remove the `docs` folder: `npm run clean`
 
 ### Quick start guides:
 
