@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #JOIN
+\*------------------------------------*/
+
+.join {
+	background-image: url('../images/join-bgr.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		background-color: rgba(0,0,0,.3);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.text-wrap {
+		position: relative;
+		z-index: 3;
+	}
+
+	h2,
+	p,
+	a {
+		color: #fff !important;
+		text-align: center;
+	}
+
+	h2 {
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+
+
+}
+
+.join--companies {
+		background-image: url('../images/companies-subscribe-bgr.jpg');
+}

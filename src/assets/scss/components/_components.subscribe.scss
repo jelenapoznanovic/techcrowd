@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #subscribe
+\*------------------------------------*/
+
+.subscribe {
+	background-image: url('../images/subscribe-bgr-patern.jpg');
+
+	.form-wrap {
+		width: 420px;
+		max-width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+
+		::-webkit-input-placeholder {
+		   text-align: center;
+		   font-size: 18px;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   text-align: center;
+		   font-size: 18px;
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   text-align: center;
+		   font-size: 18px;
+		}
+
+		:-ms-input-placeholder {
+		   text-align: center;
+		   font-size: 18px;
+		}
+	}
+
+	.btn {
+		margin-bottom: 10px;
+	}
+}
+
+
+

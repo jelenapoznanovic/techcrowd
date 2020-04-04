@@ -1,16 +1,19 @@
-{% extends "layouts/default.html" %}
-
-{% set homepage = true %}
-{% set pagetitle = "Homepage" %}
-{% set bodyClass = "homepage" %}
-
-{% block content %}
-{% include "./components/header.html" -%}
-
-<div>
-  {{ allMacros.arrow('arrow1', 'arrow-class', 'nextpage.html', 'false') }}
-</div>
-
-{% include "./components/footer.html" -%}
-
-{% endblock %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>List of markup files</title>
+  </head>
+  <body>
+    <h1>List of markup files: {{files}}</h1>
+    {% if files.length !== 0 %}
+      <ul>
+      {% for file in files %}
+        <li><a href="{{ file }}">{{ file }}</a></li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>There are no markup files created yet.</p>
+    {% endif %}
+  </body>
+</html>

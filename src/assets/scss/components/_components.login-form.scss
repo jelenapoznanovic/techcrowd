@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    #LOGIN FORM
+\*------------------------------------*/
+
+
+.login-form {
+
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+	max-width: 720px;
+	padding: 100px 150px;
+	background-color: #fdfdfd;
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+
+	@include max-screen(992px) {
+
+		padding: 80px 120px;
+	}
+
+	@include max-screen(767px) {
+
+		padding: 50px 40px 70px;
+	}
+
+	@include max-screen(480px) {
+
+		padding: 50px 20px 70px;
+	}
+
+	h1 {
+		margin-bottom: 60px;
+		font-size: 48px;
+
+		@include max-screen(767px) {
+
+			font-size: 35px;
+		}
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	.social-links {
+
+		li {
+			display: inline-block;
+			margin-right: 13px;
+			margin-left: 13px;
+
+				@include max-screen(480px) {
+
+					margin-right: 5px;
+					margin-left: 5px;
+
+					img {
+						width: 40px;
+					}
+				}
+		}
+
+	}
+
+
+	form {
+		margin-bottom: 15px;
+
+		input {
+			margin-bottom: 0;
+			border-color: #ccc;
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  font-style: italic;
+			  color: #888;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  font-style: italic;
+			  color: #888;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  font-style: italic;
+			  color: #888;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  font-style: italic;
+			  color: #888;
+			}
+		}
+	}
+
+	.forgot-pass {
+		margin-top: 10px;
+		font-style: italic;
+	}
+
+	span {
+		font-style: italic;
+		font-size: 14px;
+		color: #888;
+	}
+
+	.logo {
+		position: absolute;
+		right: 25px;
+		bottom: 25px;
+	}
+}

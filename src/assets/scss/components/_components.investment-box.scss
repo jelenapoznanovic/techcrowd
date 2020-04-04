@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    #INVESTMENT-BOX
+\*------------------------------------*/
+
+.investment {
+
+	h2 {
+		margin-bottom: 70px;
+
+		@include max-screen(767px) {
+			margin-bottom: 40px;
+		}
+	}
+
+}
+
+	.view-all {
+
+		a {
+			color: $base-text-color;
+		}
+	}
+
+	.investment__box {
+		-webkit-box-shadow: 2px 3px 3px rgba(0,0,0,.05);
+		-moz-box-shadow: 2px 3px 3px rgba(0,0,0,.05);
+		box-shadow: 2px 3px 3px rgba(0,0,0,.05);
+
+		.img-wrap {
+			position: relative;
+
+			> img {
+				width: 100%;
+				margin-bottom: 0;
+			}
+		}
+
+		.icon-wrap {
+			position: absolute;
+			right: 50px;
+			bottom: -43px;
+
+		}
+
+		.input-wrap {
+
+			a {
+				cursor: pointer;
+			}
+		}
+
+		.text-wrap {
+			padding: 30px;
+			background-color: #fcfaf6;
+		}
+
+		.location {
+
+			color: $second-text-color;
+			margin-bottom: 10px;
+
+			.flag__img {
+				margin-bottom: 7px;
+				padding-right: 15px;
+			}
+		}
+
+
+		.percent-result {
+			padding-left: 25px;
+
+			@include max-screen(480px) {
+				padding-left: 0;
+			}
+		}
+
+	}
+
+	.investment__progress-wrap {
+		background-color: rgba($color-green, .1);
+		margin-bottom: 15px;
+	}
+
+	.investment__progress {
+		height: 10px;
+		background-color: $color-green;
+	}

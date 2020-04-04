@@ -1,27 +1,43 @@
-//base font settings
-$base-font-family: Arial,
-sans-serif;
-$base-font-size: 16px;
-$base-line-height: 1.5;
+// DEFAULT SETTINGS
 
-$base-radius: 0;
+$color-green:									#44c799;
 
-$spacing-unit: 20px;
-$spacing-unit--small: 10px;
+// Basic styles
+$base-background-color:                         #fff;
+$base-border-color:                             #888;
+$base-border-radius:                            5px;
+$base-font-family:                              'Raleway', sans-serif;
+$base-font-size:                                16px;
+$base-line-height:                              24px;
+$base-link-color:                               #44c799;
+$base-selection-background-color:               rgba(#329bdd, .7);
+$base-selection-text-color:                     #fff;
+$base-text-color:                               #555;
+$second-text-color:                             #888;
+$base-title-color:                              #333;
+$second-title-color:                            #ccc;
+$title-font-weight:                             300;
 
-$page-max-width: 1560px;
-$page-default-width: 1160px;
+
+// Layout
+$spacing-unit:                                  $base-line-height;
+$spacing-unit--small:                           round($spacing-unit / 2);
+$page-max-width:                                1140px;
+$inuit-layout-gutter:							$spacing-unit;
 
 // Breakpoints
-$breakpoint-tiny: 580px;
-$breakpoint-small: 768px;
-$breakpoint-medium: 1024px;
-$breakpoint-large: 1216px;
-$breakpoint-extralarge: 1408px;
+$breakpoint-medium:                             481px;
+$breakpoint-large:                              769px;
+$breakpoint-extralarge:                         1025px;
 
-$btn--primary-height: 40px;
-$btn--primary-padding: 0 20px;
 
-$input-height: 40px;
-$input-padding: 20px;
-$input-padding--large: 25px 0;
+// Inuit breakpoints
+$breakpoints: (
+    "medium"           "screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1})",
+    "medium-and-up"    "screen and (min-width: #{$breakpoint-medium})",
+    "large"           "screen and (min-width: #{$breakpoint-large}) and (max-width: #{$breakpoint-extralarge - 1})",
+    "large-and-up"    "screen and (min-width: #{$breakpoint-large})",
+    "extralarge-and-up"    "screen and (min-width: #{$breakpoint-extralarge})",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+);
+

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #GROUP MAIN LINKS
+\*------------------------------------*/
+
+.group-main__links--documents {
+
+	li {
+		border: none;
+
+		&.active {
+			background-color: $base-text-color;
+
+			a {
+				color: #fff;
+			}
+
+		}
+
+		a {
+			span {
+				padding-left: 30px;
+
+			}
+
+		}
+	}
+
+}

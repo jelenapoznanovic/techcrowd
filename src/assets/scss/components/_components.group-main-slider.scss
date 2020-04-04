@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #GROUP-MAIN-SLIDER
+\*------------------------------------*/
+
+.text-slider {
+	position: relative;
+
+
+	.slick-prev,
+	.slick-next {
+		font-size: 0;
+		width: 10px;
+		height: 30px;
+		border: none;
+		background-repeat: no-repeat;
+
+		&:before {
+			content: '';
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.slick-prev {
+		background-image: url('../images/prev.png');
+		z-index: 10;
+		left: 0;
+	}
+
+	.slick-next {
+		background-image: url('../images/next.png');
+		right: 0;
+	}
+}
+
+
+	.text-slider__content {
+
+		padding: 0 30px 0 50px;
+
+		@include max-screen(767px) {
+			padding-left: 30px;
+		}
+
+
+
+		span {
+			color: $base-title-color;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			display: block;
+		}
+	}

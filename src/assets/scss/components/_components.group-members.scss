@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #GROUP MEMBERS
+\*------------------------------------*/
+
+
+.group__members {
+
+	h3 {
+		margin-bottom: 40px;
+	}
+
+	h3,
+	h4 {
+		font-weight: 400;
+	}
+
+	h4 {
+		color: $second-text-color;
+	}
+
+	.img-wrap {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto 10px;
+		overflow: hidden;
+		border-radius: 45px;
+
+		img {
+			width: 100%;
+		}
+	}
+}

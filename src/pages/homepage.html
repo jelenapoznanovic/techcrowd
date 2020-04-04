@@ -1,0 +1,30 @@
+{% extends "layouts/default.html" %}
+
+{% set homepage = true %}
+{% set pagetitle = "Homepage" %}
+{% set bodyClass = "homepage" %}
+
+{% block content %}
+{% include "./components/header.html" -%}
+{% include "./components/faq-form.html" -%}
+
+<main>
+    <section class="subheader subheader--home">
+        <div class="container">
+            <div class="log-reg-box">
+                <h1 class="underline type-uppercase type-light">Invest in <br /> Startups</h1>
+                <p>We're on a mission to make it simple for anyone to invest in businesses, many of which have the support of top accelerators, corporates and brands.</p>
+                <a href="log-in.html" class="btn btn--primary btn--yellow">Become an investor</a>
+                <a href="" class="btn btn--primary block">How it works</a>
+            </div><!-- end of .log-reg-box -->
+        </div>
+    </section>
+
+  {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '75') }}
+
+  
+</main>
+
+{% include "./components/footer.html" -%}
+
+{% endblock %}

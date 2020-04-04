@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #PROFILE
+\*------------------------------------*/
+
+.login-wrap {
+	background-image: url('../images/subscribe-bgr-patern.jpg');
+}
+
+	.profile-main {
+
+		h2 {
+			margin-bottom: 35px;
+		}
+
+		.group__members {
+
+			&:first-of-type {
+				margin-bottom: 65px;
+			}
+
+			a {
+				color: $base-text-color;
+			}
+		}
+	}
+
+		.profile-main__info-box {
+			background-color: #fcfaf6;
+			-webkit-box-shadow: 2px 3px 3px rgba(0,0,0,.1);
+			-moz-box-shadow: 2px 3px 3px rgba(0,0,0,.1);
+			box-shadow: 2px 3px 3px rgba(0,0,0,.1);
+			text-align: center;
+			padding: 40px 0px;
+			margin-bottom: 75px;
+
+
+			@include max-screen(480px) {
+				margin-bottom: 50px;
+
+				.btn-wrap {
+					padding: 0 10px;
+				}
+
+				.btn--primary {
+					font-size: 15px;
+				}
+			}
+
+
+			p {
+				margin-bottom: 15px;
+				font-size: 18px;
+			}
+		}
+
+			.profile-main__info-box-investor {
+				margin-bottom: 30px !important;
+
+				li {
+					display: inline-block;
+					margin: 0 7px;
+				}
+			}

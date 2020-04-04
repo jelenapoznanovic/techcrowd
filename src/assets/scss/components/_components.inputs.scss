@@ -1,74 +1,93 @@
+/*------------------------------------*\
+    #INPUTS
+\*------------------------------------*/
+
 /**
-* Reset input styles.
-*/
+ * Base input styles.
+ */
 .input {
-  -webkit-appearance: none;
-  /* removing inner shadow on iOS inputs */
-  -webkit-font-smoothing: inherit;
-  box-sizing: border-box;
-  transition: all .5s ease;
-  background: none;
-  border: none;
-  color: $color-base;
-  width: 100%;
-  display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  padding: 0;
-  /* remove browser defaults */
-  vertical-align: middle;
-  width: 100%;
+    -webkit-appearance: none;       /* removing inner shadow on iOS inputs */
+    -webkit-font-smoothing: inherit;
+    box-sizing: border-box;
+    transition: all .2s ease;
+    background: none;
+    border: 1px solid $base-border-color;
+    border-radius: $base-border-radius;
+    color: $second-text-color;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: 18px;
+    padding: 0 15px;                     /* remove browser defaults */
+    vertical-align: middle;
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
 
-  &:invalid {
-    box-shadow: none;
-    /* fixes mozilla red outline (shadow) */
-  }
 
-  &[readonly] {
-    cursor: text;
-  }
-
-  &::-ms-clear {
-    display: none;
-    /* remove IE clear icon */
-  }
-
-  @mixin input-placeholder {
-    color: $color-base;
-  }
-
-  &:not(:disabled) {
-
-    &:hover {}
-
-    &:focus {
-      outline: none;
+    &:invalid {
+        box-shadow: none;  /* fixes mozilla red outline (shadow) */
     }
-  }
+
+    &[readonly] {
+        cursor: text;
+    }
+
+    &::-ms-clear {
+        display: none; /* remove IE clear icon */
+    }
+
+    &::-webkit-input-placeholder {
+       color: $base-text-color;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: $base-text-color;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $base-text-color;
+    }
+
+    &:-ms-input-placeholder {
+       color: $base-text-color;
+    }
 }
 
-.input--primary {
-  height: $input-height;
-  padding: $input-padding;
-  color: $color-input;
-  display: flex;
-
-  &:not(:disabled) {
-
-    &:hover {}
-
-    &:focus {}
-
-    @mixin input-placeholder {
-      color: $color-input-placeholder;
+/**
+ * Primary input.
+ */
+.input--primary,
+%input--primary {
+    /**
+     * @hover
+     */
+    &:hover {
     }
-  }
 
-  /**
-   * @disabled
-   */
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed !important;
-  }
+    /**
+     * @focus
+     */
+    &:focus {
+
+    }
+
+    /**
+     * Error state.
+     */
+    .is-error &,
+    &.is-error {
+        border-color: #ff8688;
+    }
+}
+
+/**
+ * Textarea input.
+ */
+.input--textarea {
+    resize: none;
+    font-family: $base-font-family;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
 }

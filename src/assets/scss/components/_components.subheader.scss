@@ -1,0 +1,241 @@
+/*------------------------------------*\
+    #SUBHEADER
+\*------------------------------------*/
+
+.subheader,
+.subheader--group {
+	background-image: url('../images/investor-bgr.jpg');
+	background-position: 50% 50%;
+}
+
+.subheader {
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0 0 167px;
+
+	@include max-screen(992px) {
+		padding: 0 0 60px;
+	}
+
+	.btn--primary {
+		// color: $base-text-color !important;
+	}
+
+	.btn--yellow {
+		color: $base-text-color !important;
+	}
+}
+
+	.log-reg-box {
+		width: 555px;
+		max-width: 100%;
+		background-color: rgba(255,255,255,0.8);
+		padding: 126px 68px;
+
+		@include max-screen(992px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include max-screen(992px) {
+			padding: 60px !important;
+		}
+
+		@include max-screen(480px) {
+			padding: 30px !important;
+		}
+	}
+
+.subheader--home {
+	background-image: url('../images/subheader-bgr.jpg');
+
+	.btn--primary {
+		color: #fff;
+	}
+
+	.btn--yellow {
+		margin-bottom: 37px;
+	}
+}
+
+.subheader--group {
+	position: relative;
+	background-size: cover;
+
+
+	@include max-screen(480px) {
+
+		.row {
+			display: block;
+		}
+	}
+
+	.img-wrap {
+		border: 15px solid #fff;
+		display: inline-block;
+		max-width: 100%;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	h1,
+	h2 {
+		color: #ecdec3;
+	}
+
+	h2 {
+		font-style: italic;
+		font-weight: 400;
+		margin-bottom: 40px;
+
+	}
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: rgba(0,0,0,.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.group-members-number {
+		color: #fff;
+		line-height: 1.2;
+		margin-bottom: 20px;
+
+		span {
+			font-size: 60px;
+
+			@include max-screen(1200px) {
+				font-size: 30px;
+			}
+		}
+
+		p {
+
+			@include max-screen(1200px) {
+				margin-bottom: 10px !important;
+			}
+		}
+
+
+	}
+
+	.social-icons {
+		margin-bottom: 20px;
+
+		li {
+			height: 30px;
+			width: 30px;
+			display: inline-block;
+			margin-left: 8px;
+			margin-right: 8px;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+.subheader--single-companies {
+	background-image: url('../images/single-company-subheader.jpg');
+	background-size: cover;
+
+	.group-members-number--investor,
+	.group-members-number--time {
+
+		p {
+			font-size: 30px;
+
+			@include max-screen(1200px) {
+				font-size: 20px;
+			}
+
+		}
+	}
+}
+
+.subheader--investor,
+.subheader--companies {
+
+	.log-reg-box {
+		padding: 50px 70px 60px;
+	}
+}
+
+.subheader--investor {
+	padding-bottom: 106px;
+
+	.text-wrap {
+		margin-bottom: 40px;
+	}
+}
+
+.subheader--companies {
+		background-image: url('../images/companies-subheader-bgr.jpg');
+
+	p {
+		margin-bottom: 65px;
+
+		@include max-screen(767px) {
+			margin-bottom: 50px;
+		}
+
+		@include max-screen(480px) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.subheader--faq {
+	background-color: #f0e6d1;
+	background-image: none;
+	background-repeat: repeat-x;
+	background-size: auto;
+	text-align: center;
+	padding: 130px 0;
+	background-image: url('../images/yellow-patern.jpg');
+	background-repeat: repeat;
+
+	@include max-screen(992px) {
+		padding: 100px 0;
+	}
+
+	@include max-screen(480px) {
+		padding: 60px 0;
+	}
+}
+
+.subheader--profile {
+	background-image: url('../images/profile-subheader.jpg');
+	padding: 100px 0;
+
+	h1 {
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 0;
+		white-space: nowrap;
+		line-height: 1;
+	}
+
+	.img-wrap {
+		max-width: 100%;
+
+		@include max-screen(991px) {
+
+			margin-bottom: 20px;
+		}
+	}
+
+	.btn--yellow {
+		color: $base-text-color !important;
+	}
+}
+

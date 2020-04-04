@@ -1,13 +1,33 @@
-{% macro arrow(src, customClass, href, arrowUp) %}
-
-{% if arrowUp %}
-<a class="arrow arrow--up {{ customClass }}" href="{{ href }}">
-  <img src="assets/img/{{ src }}.svg" alt="">
-</a>
-{% else %}
-<a class="arrow {{ customClass }}" href="{{ href }}">
-  <img src="assets/img/{{ src }}.svg" alt="">
-</a>
-{% endif %}
-
+{% macro investmentBox(img_url, heading, text, location, progress) %}
+	<div class="investment__box">
+		<div class="img-wrap">
+			<img src="assets/img/{{img_url}}.jpg">
+			<div class="icon-wrap">
+				<img src="assets/img/circle.png">
+			</div><!-- end of .icon-wrap -->
+		</div>
+		<div class="text-wrap">
+			<h3 class="type-uppercase underline">{{ heading }}</h3>
+			<p>{{ text }}</p>
+			<div class="location">
+				<div class="flag flag--bottom">
+					<img src="assets/img/pin.png" alt="" class="flag__img" />
+					<div class="flag__body">{{ location }}</div>
+				</div>
+			</div>
+			<div class="investment__progress-wrap">
+				<div class="investment__progress" data-progress="{{ progress }}"></div>
+			</div>
+			<span class="percent-result">Open for investment - {{ progress }}% Funded</span>
+		</div>
+	</div>
 {% endmacro %}
+
+
+{% macro icon(name, classModifier) %}
+  <svg role="img" class="icon {{ classModifier}}">
+    <use xlink:href="assets/icons/icons.svg#{{ name }}"></use>
+  </svg>
+{% endmacro %}
+
+

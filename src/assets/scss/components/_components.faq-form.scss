@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #FAQ FORM
+\*------------------------------------*/
+
+.faq-form {
+	background-color: #fff;
+	padding: 50px 30px 30px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	max-width: 100%;
+	z-index: 1031;
+	display: none;
+
+	@include max-screen(480px) {
+		padding: 40px 20px 20px;
+
+	}
+
+	.btn-close {
+		text-transform: uppercase;
+		text-align: right;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		padding: 10px;
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+
+	p {
+		color: $base-title-color;
+	}
+
+	.input,
+	.input--textarea {
+		margin-bottom: 20px;
+		color: $second-text-color;
+
+	    &::-webkit-input-placeholder {
+	       text-align: center;
+	       font-size: $base-font-size;
+	    }
+
+	    &:-moz-placeholder { /* Firefox 18- */
+	       text-align: center;
+	       font-size: $base-font-size;
+	    }
+
+	    &::-moz-placeholder {  /* Firefox 19+ */
+	       text-align: center;
+	       font-size: $base-font-size;
+	    }
+
+	    &:-ms-input-placeholder {
+	       text-align: center;
+	       font-size: $base-font-size;
+	    }
+	}
+
+	.input--textarea {
+		display: block;
+		width: 100%;
+		border: 1px solid $base-border-color;
+	    border-radius: $base-border-radius;
+		min-height: 120px;
+		padding: 10px;
+	}
+
+	a {
+		margin-bottom: 20px;
+	}
+
+}

@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    #HEADER MAIN
+\*------------------------------------*/
+
+.header-main {
+
+	background-color: #222;
+	padding: 19px 0;
+	overflow: hidden;
+
+	@include min-screen(992px) {
+		overflow: visible;
+	}
+
+	.bg-faded {
+		background-color: transparent;
+	}
+
+	.navbar-light {
+
+		.navbar-nav {
+			padding-top: 15px;
+
+			.nav-link {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 18px;
+				color: #ecdec3;
+
+			}
+
+			@include min-screen(992px) {
+				padding-top: 0;
+			}
+		}
+
+	}
+
+	.navbar {
+		padding: 0;
+	}
+
+	.navbar-brand {
+		padding: 0;
+
+		@include max-screen(370px) {
+			width: 150px;
+		}
+	}
+
+	.navbar-toggler {
+		padding-top: 0;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.icon-hamburger {
+		color: #ecdec3;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+	.navbar-toggler-right {
+		top: 5px;
+
+		@include max-screen(420px) {
+			right: -5px;
+		}
+	}
+
+	.nav-item {
+		position: relative;
+
+		.dropdown {
+			display: none;
+			background-color: #222;
+			padding-left: 20px;
+
+			@include min-screen(992px) {
+				padding-left: 0;
+				position: absolute;
+				left: 0;
+				top: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.nav-item--dropdown-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -10px;
+		cursor: pointer;
+		float: right;
+		padding: 10px;
+		color: #ecdec3;
+
+		@include min-screen(992px) {
+			padding: 5px;
+			float: none;
+		}
+	}
+
+.main-nav {
+
+	li {
+		display: inline-block;
+		margin-left: 25px;
+	}
+
+		a {
+		}
+}
