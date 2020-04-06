@@ -1,0 +1,106 @@
+{% extends "layouts/default.html" %}
+
+{% set homepage = true %}
+{% set pagetitle = "Homepage" %}
+{% set bodyClass = "homepage" %}
+
+{% block content %}
+{% include "./components/header.html" -%}
+
+<main>
+
+    <section class="subheader subheader--companies">
+        <div class="container">
+            <div class="log-reg-box">
+                <h1 class="underline type-uppercase type-light">Investment <br />opportunity</h1>
+                <p>Invest as little as $10 in the private companies shaping our future. Pick the companies you believe in and support their mission.</p>
+                <a href="" class="btn btn--primary btn--yellow">Discover companies</a>
+            </div><!-- end of .log-reg-box -->
+        </div>
+    </section>
+
+    <section class="investment">
+        <div class="container">
+
+            <div class="row gutter-30">
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="join join--companies">
+        <div class="container">
+            <div class="text-wrap">
+                <h2 class="h1 underline underline--white underline--center type-uppercase">Raising money?</h2>
+                <p>Raise investment, engage with your community and grow your business in a more efficient, streamlined way.</p>
+                <a class="btn btn--primary center">Start raising</a>
+            </div><!-- end of .text-wrap -->
+        </div>
+    </section>
+
+    <section class="investment">
+        <div class="container">
+
+            <div class="row gutter-30">
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    {{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '79') }}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="underline underline--center type-uppercase">Get access to the newest companies</h2>
+                <p>Be the first to receive investment opportunities, straight to your inbox</p>
+                <div class="form-wrap text-center">
+                    <input class="input" type="email" placeholder="Your email address">
+                    <a href="" class="btn btn--primary">Subscribe</a>
+                </div><!-- end of .form-wrap -->
+                <p class="second-text-color type-small">We will send you weekly updates on Republic companies.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% include "./components/footer.html" -%}
+
+{% endblock %}

@@ -1,0 +1,227 @@
+{% extends "layouts/default.html" %}
+{% set title = "Group" %}
+{% set page = "group" %}
+
+
+{% block content %}
+    {% include "./components/header.html" -%}
+    
+	<main>
+
+		<section class="subheader--group">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-12">
+						<h1 class="type-uppercase">Group name</h1>
+						<h2 class="h4">LSince 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.t fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </h2>
+
+						<div class="row align-items-end">
+							<div class="col-md-4">
+								<div class="img-wrap">
+									<img src="img/single-group-pic.jpg">
+								</div><!-- end of .img-wrap -->
+							</div>
+							<div class="col-lg-6 col-md-8">
+
+								<div class="group-members-number">
+									<span>393</span>
+									<p>Group members</p>
+								</div>
+								<ul class="social-icons">
+									<li><a href=""><img src="img/fb.png"></a></li>
+									<li><a href=""><img src="img/tw.png"></a></li>
+									<li><a href=""><img src="img/in.png"></a></li>
+									<li><a href=""><img src="img/g+.png"></a></li>
+								</ul>
+								<a href="" class="btn btn--primary btn--medium">join group</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- end of .container -->
+		</section>
+
+		<section class="group-main">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+
+						<div class="group-main__links">
+							<ul>
+								<li class="active"><a href="#companies">Companies</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#disccusion">Discussion</a></li>
+							</ul>
+							<a class="btn btn--primary full-width">Join group</a>
+						</div><!-- end of .group-main__links -->
+						<div class="blog-author">
+							<div class="flag flag--small">
+								<div class="flag__img">
+									<img src="img/guy-pic.png" alt="" />
+								</div>
+								<div class="flag__body">
+									<h4 class="h5">Tom Amenta</h4>
+									<span>CEO and host of Group</span>
+								</div>
+							</div>
+						</div><!-- end of .blog-author -->
+
+
+						<div class="group__members">
+
+							<h3 class="type-uppercase text-center">group members</h3>
+							<div class="row">
+								<div class="col-4">
+									{{ allMacros.groupMembers('member1.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member2.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member3.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member4.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member3.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member2.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member1.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member2.png', 'Tom Amenta') }}
+								</div>
+								<div class="col-4">
+									{{ allMacros.groupMembers('member3.png', 'Tom Amenta') }}
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<article id="companies" class="group--companies">
+							<h2 class="type-uppercase text-center">Companies endorsed by Technori</h2>
+
+							<div class="row gutter-30">
+								<div class="col-md-6">
+									{{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '55') }}
+								</div>
+								<div class="col-md-6">
+									{{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '55') }}
+								</div>
+								<div class="col-md-6">
+									{{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '55') }}
+								</div>
+								<div class="col-md-6">
+									{{ allMacros.investmentBox('investment-pic', 'FlipWord', 'A unique way of teaching language by integrating learning into everyday activities​', 'United States of America', '55') }}
+								</div>
+							</div>
+							<p class="text-right">View all funded companies</p>
+						</article><!-- end of .group-companies -->
+
+
+						<article id="about" class="group--about">
+							<h2 class="type-uppercase text-center">About the group</h2>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+							<div class="img-wrap text-center mb-4">
+								<img src="img/about-the-group.jpg">
+							</div><!-- end of .img-wrap -->
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<div class="text-center">
+								<a href="" class="btn btn--primary">join group</a>
+							</div>
+						</article>
+
+						<article id="disccusion" class="group--disccusion">
+
+							<h2 class="type-uppercase text-center">Group discussion</h2>
+
+							<div class="row gutter-30">
+								<div class="col-lg-12">
+									<div class="group--disccusion__wrap">
+										<div class="blog-author">
+											<div class="flag flag--small">
+												<div class="flag__img">
+													<div class="img-wrap">
+														<img src="img/disccusion-pic.png" alt="" />
+													</div>
+												</div>
+												<div class="flag__body">
+													<h4 class="h5 type-uppercase">Gabriel Lee</h4>
+													<span>3 days ago</span>
+												</div>
+											</div>
+										</div><!-- end of .blog-author -->
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
+									</div>
+								</div><!-- end of .col-lg-12 -->
+
+								<div class="col-lg-12">
+									<div class="group--disccusion__wrap">
+										<div class="blog-author">
+											<div class="flag flag--small">
+												<div class="flag__img">
+													<div class="img-wrap">
+														<img src="img/disccusion-pic.png" alt="" />
+													</div>
+												</div>
+												<div class="flag__body">
+													<h4 class="h5 type-uppercase">Gabriel Lee</h4>
+													<span>3 days ago</span>
+												</div>
+											</div>
+										</div><!-- end of .blog-author -->
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
+
+										<div class="line-wrapper">
+											<div class="line line--lighter"></div>
+										</div><!-- end of .line-wrapper -->
+
+										<div class="blog-author">
+											<div class="flag flag--small">
+												<div class="flag__img">
+													<div class="img-wrap">
+														<img src="img/disccusion-pic.png" alt="" />
+													</div>
+												</div>
+												<div class="flag__body">
+													<h4 class="h5 type-uppercase">Gabriel Lee</h4>
+													<span>3 days ago</span>
+												</div>
+											</div>
+										</div><!-- end of .blog-author -->
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
+									</div>
+								</div><!-- end of .col-lg-12 -->
+
+								<div class="col-lg-12">
+									<div class="text-right view-comments"><a href="">View all comments</a></div>
+								</div><!-- end of .col-lg-12 -->
+
+								<div class="col-lg-12">
+									<div class="text-center">
+										<a href="" class="btn btn--primary">join group</a>
+									</div>
+								</div><!-- end of .col-lg-12 -->
+							</div><!-- end of .row gutter-30 -->
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<a href="" id="to_the_top">{{ allMacros.icon('arrow-up') }}</a>
+
+	</main>
+	{% include "./components/footer.html" -%}
+
+{% endblock %}

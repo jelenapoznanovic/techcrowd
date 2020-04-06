@@ -1,0 +1,135 @@
+{% extends "layouts/default.html" %}
+
+{% set blog = true %}
+{% set pagetitle = "Blog" %}
+{% set bodyClass = "blog" %}
+
+{% block content %}
+{% include "./components/header.html" -%}
+
+<main>
+
+    <section class="subheader--faq">
+        <div class="container">
+            <h1 class="type-uppercase">Blog</h1>
+        </div><!-- end of .container -->
+    </section>
+
+    <section class="blog-main">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="blog-main__content">
+                        <div class="img-wrap">
+                            <a href="blog-inner.html"><img src="img/blog-pic.jpg"></a>
+                        </div><!-- end of .img-wrap -->
+                        <h2 class="underline"><a href="blog-inner.html">Founder series: Interview with Martha Hernandez, founder of madeBOS</a></h2>
+                        <div class="mb-3 justifize justifize--top">
+                            <div class="justifize__box">
+                                <time class="style-italic">May 16, 2017</time>
+                                <span class="author">by Caroline Hofmann</span>
+                            </div><!-- end of .justifize__box -->
+                            <div class="justifize__box">
+                                <div class="comments-number style-italic">comments: <span>7</span></div>
+                            </div><!-- end of .justifize__box -->
+                        </div><!-- end of .wrap -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore... </p>
+                        <a href="blog-inner.html" class="text-right block style-italic">Read more</a>
+                    </div><!-- end of .content -->
+                    <div class="line line--lighter"></div><!-- end of .line -->
+                    <div class="blog-main__content">
+                        <div class="img-wrap">
+                            <a href="blog-inner.html"><img src="img/blog-pic.jpg"></a>
+                        </div><!-- end of .img-wrap -->
+                        <h2 class="underline"><a href="blog-inner.html">Founder series: Interview with Martha Hernandez, founder of madeBOS</a></h2>
+                        <div class="mb-3 justifize justifize--top">
+                            <div class="justifize__box">
+                                <time class="style-italic">May 16, 2017</time>
+                                <span class="author">by Caroline Hofmann</span>
+                            </div><!-- end of .justifize__box -->
+                            <div class="justifize__box">
+                                <div class="comments-number style-italic">comments: <span>7</span></div>
+                            </div><!-- end of .justifize__box -->
+                        </div><!-- end of .wrap -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore... </p>
+                        <a href="blog-inner.html" class="text-right block style-italic">Read more</a>
+                    </div><!-- end of .content -->
+                    <div class="line line--lighter"></div><!-- end of .line -->
+                    <div class="blog-main__content">
+                        <div class="img-wrap">
+                            <a href="blog-inner.html"><img src="img/blog-pic.jpg"></a>
+                        </div><!-- end of .img-wrap -->
+                        <h2 class="underline"><a href="blog-inner.html">Founder series: Interview with Martha Hernandez, founder of madeBOS</a></h2>
+                        <div class="mb-3 justifize justifize--top">
+                            <div class="justifize__box">
+                                <time class="style-italic">May 16, 2017</time>
+                                <span class="author">by Caroline Hofmann</span>
+                            </div><!-- end of .justifize__box -->
+                            <div class="justifize__box">
+                                <div class="comments-number style-italic">comments: <span>7</span></div>
+                            </div><!-- end of .justifize__box -->
+                        </div><!-- end of .wrap -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore... </p>
+                        <a href="blog-inner.html" class="text-right block style-italic">Read more</a>
+                    </div><!-- end of .content -->
+                    <div class="line line--lighter"></div><!-- end of .line -->
+
+                    <div class="pagination-wrap text-center">
+                        <ul class="pagination">
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <aside>
+
+                        <div class="aside-links">
+                            <div class="input-wrap">
+                                <input type="text" class="input" placeholder="Search" />
+                            </div><!-- end of .input-wrap -->
+                            <h3 class="h4 type-uppercase underline underline--yellow">Categories</h3>
+                            <ul>
+                                <li><a href="">Latest</a></li>
+                                <li><a href="">News</a></li>
+                                <li><a href="">Investors</a></li>
+                                <li><a href="">Entrepreneurs</a></li>
+                            </ul>
+
+                            <h3 class="h4 type-uppercase underline underline--yellow">archiv</h3>
+                            <ul>
+                                <li><a href="">May 2017</a></li>
+                                <li><a href="">April 2017</a></li>
+                                <li><a href="">March 2017</a></li>
+                                <li><a href="">February 2017</a></li>
+                                <li><a href="">January 2017</a></li>
+                            </ul>
+                        </div><!-- end of .aside-links -->
+
+                        <div class="aside-subscribe">
+                            <h2 class="type-uppercase underline text-center">Get access to the newest companies</h2>
+                            <p>Be the first to receive investment opportunities, straight to your inbox</p>
+                            <form>
+                                <input class="input" placeholder="Your email address">
+                                <button class="btn btn--primary">Subscribe</button>
+                            </form>
+                            <small class="type-small">We will send you weekly updates on techcrowd companies.</small class="">
+                        </div><!-- end of .aside-subscribe -->
+
+                    </aside>
+                </div>
+
+            </div><!-- end of .row -->
+        </div>
+
+    </section>
+
+</main>
+
+{% include "./components/footer.html" -%}
+
+{% endblock %}

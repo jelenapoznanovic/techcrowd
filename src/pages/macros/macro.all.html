@@ -23,11 +23,41 @@
 	</div>
 {% endmacro %}
 
+{% macro investorGroupsBox(classModifier, imgUrl, title, members, text) %}
+	<div class="investor-groups__box {{ classModifier }}">
+		<div class="flag flag--large">
+			<div class="flag__img">
+				<img src="assets/img/{{ imgUrl }}">
+			</div>
+			<div class="flag__body">
+				<h3 class="underline">{{ title }}</h2>
+				<p>{{ members }}</p>
+			</div>
+		</div>
+		<p class="text-center">{{ text }}</p>
+		<div class="input-wrap">
+			<a class="input type-uppercase">join</a>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro groupMembers(imgUrl, title) %}
+	<div class="group__members-item">
+		<div class="img-wrap">
+			<img src="img/{{ imgUrl }}">
+		</div>
+		<h4 class="text-center">{{ title }}</h4>
+	</div>
+{% endmacro %}
+
+
 
 {% macro icon(name, classModifier) %}
   <svg role="img" class="icon {{ classModifier}}">
     <use xlink:href="assets/icons/icons.svg#{{ name }}"></use>
   </svg>
 {% endmacro %}
+
+
 
 

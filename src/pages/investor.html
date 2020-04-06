@@ -1,0 +1,83 @@
+{% extends "layouts/default.html" %}
+
+{% set investor = true %}
+{% set pagetitle = "Investor" %}
+{% set bodyClass = "investor" %}
+
+{% block content %}
+{% include "./components/header.html" -%}
+
+<main>
+
+    <section class="subheader subheader--investor">
+        <div class="container">
+            <div class="log-reg-box">
+                <h1 class="underline type-uppercase type-light">Investor <br />Groups</h1>
+                <div class="text-wrap">
+                    <p>Join investor groups that pursue a mission or support a cause. Discuss investment opportunities, share insights and ideas with other investors and invest in companies as part of the group.</p>
+                </div>
+                <a href="" class="btn btn--primary btn--yellow">Discover groups</a>
+            </div><!-- end of .log-reg-box -->
+        </div>
+    </section>
+
+    <section class="investor-groups">
+        <div class="container">
+
+            <div class="row gutter-30">
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox1.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox2.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox3.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox4.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="subscribe subscribe--investor">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="underline underline--center type-uppercase">Get access to the newest companies</h2>
+                <p>Be the first to receive investment opportunities, straight to your inbox</p>
+                <div class="form-wrap text-center">
+                    <input class="input" type="email" placeholder="Your email address">
+                    <a href="" class="btn btn--primary">Subscribe</a>
+                </div><!-- end of .form-wrap -->
+                <p class="second-text-color type-small">We will send you weekly updates on Republic companies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="investor-groups">
+        <div class="container">
+            <div class="row gutter-30">
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox1.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox2.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox3.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+                <div class="col-lg-6">
+                    {{ allMacros.investorGroupsBox('investor-groups__box-yellow', 'infobox4.jpg', 'Investor Group Name', '150 Members', "Since 2010, we've featured 275+ startups that later raised more than $260 million in venture capital.") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+{% include "./components/footer.html" -%}
+
+{% endblock %}

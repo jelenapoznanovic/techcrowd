@@ -4,7 +4,7 @@
 
 .subheader,
 .subheader--group {
-	background-image: url('../images/investor-bgr.jpg');
+	background-image: url('../img/investor-bgr.jpg');
 	background-position: 50% 50%;
 }
 
@@ -15,10 +15,6 @@
 
 	@include max-screen(992px) {
 		padding: 0 0 60px;
-	}
-
-	.btn--primary {
-		// color: $base-text-color !important;
 	}
 
 	.btn--yellow {
@@ -47,7 +43,7 @@
 	}
 
 .subheader--home {
-	background-image: url('../images/subheader-bgr.jpg');
+	background-image: url('../img/subheader-bgr.jpg');
 
 	.btn--primary {
 		color: #fff;
@@ -145,7 +141,7 @@
 
 
 .subheader--single-companies {
-	background-image: url('../images/single-company-subheader.jpg');
+	background-image: url('../img/single-company-subheader.jpg');
 	background-size: cover;
 
 	.group-members-number--investor,
@@ -179,7 +175,7 @@
 }
 
 .subheader--companies {
-		background-image: url('../images/companies-subheader-bgr.jpg');
+		background-image: url('../img/companies-subheader-bgr.jpg');
 
 	p {
 		margin-bottom: 65px;
@@ -201,7 +197,7 @@
 	background-size: auto;
 	text-align: center;
 	padding: 130px 0;
-	background-image: url('../images/yellow-patern.jpg');
+	background-image: url('../img/yellow-patern.jpg');
 	background-repeat: repeat;
 
 	@include max-screen(992px) {
@@ -214,7 +210,7 @@
 }
 
 .subheader--profile {
-	background-image: url('../images/profile-subheader.jpg');
+	background-image: url('../img/profile-subheader.jpg');
 	padding: 100px 0;
 
 	h1 {
