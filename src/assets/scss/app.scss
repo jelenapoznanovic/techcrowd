@@ -1,19 +1,45 @@
 // Add your codes here
 
-
+// Settings
 @import "./settings/settings.colors";
 @import "./settings/settings.global";
+@import './settings/settings.starterized';
+@import './_starterized/starterized-settings/settings.defaults';
 
+// Tools
+@import './_starterized/starterized-tools/tools.functions';
+@import './_starterized/starterized-tools/tools.mixins';
+@import './_starterized/starterized-tools/tools.aliases';
+@import './tools/tools.aliases';
 @import "./tools/tools.mixins";
 
+// Generic
+@import './_starterized/starterized-generic/generic.viewport';
+@import './_starterized/starterized-generic/generic.inuit-reset';
+@import './_starterized/starterized-generic/generic.normalize';
+@import './_starterized/starterized-generic/generic.reset';
+@import './_starterized/starterized-generic/generic.selection';
 @import "./generic/generic.reset";
 @import "./generic/generic.box-sizing";
 @import "./generic/generic.fonts";
 
-// @import "./elements/elements.page";
-// @import "./elements/elements.headings";
-// @import "./elements/elements.links";
-// @import "./objects/objects.wrapper";
+// Base
+@import './base/base.page';
+@import './base/base.grid';
+@import './base/base.headings';
+@import './base/base.type';
+@import './base/base.links';
+@import './_starterized/starterized-base/base.links';
+
+// Objects
+@import './_starterized/starterized-objects/objects.buttons';
+@import './_starterized/starterized-objects/objects.tableize';
+@import './_starterized/starterized-objects/objects.justifize';
+@import './objects/objects.container';
+@import './objects/objects.embedded';
+@import './objects/objects.icons';
+@import './objects/objects.underline';
+@import './objects/objects.helper-classes';
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './components/components.footer-main';
@@ -40,5 +66,19 @@
 @import './components/components.profile';
 @import './components/components.faq-form';
 
+// Slick slider
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import './components/components.group-main-slider';
+@import './components/components.social-boxes';
+
+// Shame
+@import 'shame';
 // @import "./trumps/trumps.helpers";
 // @import "./trumps/trumps.spacing";
+// Trumps
+@import './_starterized/starterized-trumps/trumps.helpers';
+@import './_starterized/starterized-trumps/trumps.type';
+@import './trumps/trumps.type';
+@import './trumps/trumps.colors';
+@import './trumps/trumps.generic-responsive';

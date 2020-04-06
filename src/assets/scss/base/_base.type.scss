@@ -1,0 +1,122 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+
+    h1, .h1 {
+        font-size: 60px;
+
+    }
+
+    h2, .h2 {
+        font-size: 30px;
+    }
+
+    h3, .h3 {
+        font-size: 24px;
+    }
+
+    h4, .h4 {
+        font-size: 18px;
+    }
+
+    h5, .h5 {
+        font-size: 16px;
+    }
+
+    h6, .h6 {
+        font-size: 14px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 300;
+        color: $base-title-color;
+        margin-bottom: 20px;
+    }
+
+    @include max-screen(992px) {
+
+        h1, .h1 {
+            font-size: 50px;
+        }
+
+        h2, .h2 {
+            font-size: 25px;
+        }
+
+        h3, .h3 {
+            font-size: 24px;
+        }
+    }
+
+    @include max-screen(767px) {
+
+        h1, .h1 {
+            font-size: 40px;
+        }
+
+        h2, .h2 {
+            font-size: 24px;
+        }
+
+        h3, .h3 {
+            font-size: 22px;
+        }
+
+    }
+
+    @include max-screen(480px) {
+
+        h1, .h1 {
+            font-size: 36px;
+        }
+
+        h2, .h2 {
+            font-size: 22px;
+        }
+
+        h3, .h3 {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        font-size: $base-font-size;
+    }
+
+    img,
+    p,
+    ul,
+    ol,
+    pre,
+    blockquote,
+    .embedded {
+        &:not(:last-child) {
+            margin-bottom: $spacing-unit;
+        }
+    }
+
+    i,
+    em {
+        font-style: italic;
+    }
+
+    b,
+    strong {
+        font-weight: 700;
+    }
+
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+

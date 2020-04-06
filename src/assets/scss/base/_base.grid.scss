@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #Custom grid
+\*------------------------------------*/
+
+.gutter-30.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.gutter-30 > [class^="col-"], .gutter-30 > [class^=" col-"] {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+}

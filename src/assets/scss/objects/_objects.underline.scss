@@ -1,0 +1,35 @@
+.underline {
+
+	&:after {
+		content: '';
+		height: 5px;
+		width: 130px;
+		background-color: #ff8700;
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+.underline--white {
+
+	&:after {
+		background-color: #fff;
+	}
+}
+
+.underline--yellow {
+
+	&:after {
+		background-color: #ecdec3;
+	}
+}
+
+.underline--center {
+
+	&:after {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
