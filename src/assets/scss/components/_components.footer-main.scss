@@ -93,6 +93,9 @@
 				background-color: #4d4e4e;
 				border-radius: 45px;
 				display: block;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 			&:first-of-type {

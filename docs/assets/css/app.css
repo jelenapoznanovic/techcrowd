@@ -8749,7 +8749,10 @@ a.text-dark:hover, a.text-dark:focus {
     width: 30px;
     background-color: #4d4e4e;
     border-radius: 45px;
-    display: block; }
+    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
   .social-icons li:first-of-type {
     margin-left: 0; }
 
@@ -10257,7 +10260,7 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: #4099ff; }
   .social-boxes__item--linkedin:hover {
     background-color: #0e76a8; }
-  .social-boxes__item--google-plus:hover {
+  .social-boxes__item--instagram:hover {
     background-color: #d34836; }
   @media screen and (max-width: 992px) {
     .social-boxes__item {
