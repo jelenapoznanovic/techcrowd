@@ -842,709 +842,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-/* --------------------------------------------------------------------------------------
-+
-+ BUTTONS
-+
--------------------------------------------------------------------------------------- */
-.btn {
-  transition: all .2s ease;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  background: none;
-  border: none;
-  display: inline-block;
-  line-height: normal;
-  margin: 0;
-  /* remove margin for some browsers */
-  padding: 0;
-  /* remove padding in Firefox */
-  text-decoration: none;
-  text-shadow: none;
-  vertical-align: middle;
-  white-space: nowrap; }
-  .btn:hover {
-    cursor: pointer;
-    text-decoration: none; }
-
-.btn--full {
-  box-sizing: border-box;
-  display: block !important;
-  width: 100% !important;
-  /* force 100% width for <button> */ }
-
-/*------------------------------------*\
-    #TABLEIZE
-\*------------------------------------*/
-/**
- * The `.tableize__content` serves as container for cell content. If you need
- * width or padding set on a cell, make sure you set it to `.tableize__content`
- * instead since that is what makes the whole thing work. That being said
- * `.tableize__content` is optional.
-
-   <div class="tableize">
-     <div class="tableize__cell">
-       <div class="tableize__content">
-         cell content
-       </div>
-     </div>
-     <div class="tableize__cell">
-       <div class="tableize__content">
-         cell content
-       </div>
-     </div>
-   </div>
- */
-.tableize {
-  display: table;
-  width: 100%; }
-
-/**
-     * Tableize cell.
-     */
-.tableize__cell {
-  display: table-cell;
-  vertical-align: top; }
-
-/**
-     * Filler cell. There is no need for using this class if parent `.tableize`
-     * has `.tableize--fixed` modifier.
-     *
-     * 1. Fills the rest of the row when one or more cells have fixed width.
-     */
-.tableize__cell--fill {
-  width: 100%;
-  /* [1] */ }
-
-/**
-     * Middle tableize aligns tableize cell to their middles.
-     */
-.tableize--middle > .tableize__cell {
-  vertical-align: middle; }
-
-/**
-     * Bottom tableize aligns tableize cell to their bottom.
-     */
-.tableize--bottom > .tableize__cell {
-  vertical-align: bottom; }
-
-/**
-     * Fixed tableize makes:
-     * - all cells occupy equal width or
-     * - if one (or more) cells are fixed (or percentage base) width
-     *   the remaining columns will occupy rest of the available space.
-     *
-     * More info about `table-layout: fixed;` at
-     * http://css-tricks.com/fixing-tables-long-strings/
-     */
-.tableize--fixed {
-  table-layout: fixed; }
-
-/**
-     * Full height tableize.
-     */
-.tableize--full {
-  height: 100%; }
-  .tableize--full > .tableize__cell,
-  .tableize--full > .tableize__cell > .tableize__content {
-    height: inherit; }
-
-/* --------------------------------------------------------------------------------------
-+
-+ JUSTIFIZE
-+
--------------------------------------------------------------------------------------- */
-/*
-    http://www.css-101.org/articles/responsive-boxes/magic-boxes.php
-
-    <div class="justifize">
-      <div class="justifize__box">
-        justifize box content
-      </div>
-      <div class="justifize__box">
-        justifize box content
-      </div>
-      <div class="justifize__box">
-        justifize box content
-      </div>
-    </div>
-*/
-.justifize {
-  font-size: 1px;
-  /* IE 9, 10, 11 FIX */
-  text-align: justify; }
-  .justifize:after {
-    content: "";
-    display: inline-block;
-    width: 100%; }
-
-.justifize__box {
-  font-size: 16px;
-  font-size: 1rem;
-  /* font size for html element MUST be set to 10px for this to work */
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle; }
-  .justifize--top .justifize__box {
-    vertical-align: top; }
-  .justifize--bottom .justifize__box {
-    vertical-align: bottom; }
-
-/*------------------------------------*\
-    #CONTAINER
-\*------------------------------------*/
-.container {
-  margin: 0 auto;
-  max-width: 1188px;
-  padding-left: 24px;
-  padding-right: 24px; }
-  @media screen and (max-width: 480px) {
-    .container {
-      max-width: 1164px;
-      padding-left: 12px;
-      padding-right: 12px; } }
-
-/*------------------------------------*\
-    #EMBEDDED
-\*------------------------------------*/
-/*
-    BASED ON https://github.com/suitcss/components-flex-embed/blob/master/flex-embed.css, mashed up with http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-
-    <div class="embedded">
-      [iframe|object|embed]
-    </div>
-*/
-.embedded {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  /**
-     * Descendant: media element
-     *
-     * Utility of the component is improved by provide an explicit descendant
-     * class. However, it will work automatically for iframes, embeds, and objects
-     * to account for times when you cannot modify the attributes for 3rd party
-     * widget code.
-     */
-  /**
-     * A pseudo-element shunt is used to provide support for `max-height`. The
-     * `max-height` property has no affect when using a percentage-padding to set
-     * the aspect ratio.
-     */ }
-  .embedded .embedded__item,
-  .embedded video,
-  .embedded iframe,
-  .embedded embed,
-  .embedded object {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .embedded:before {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-    /* initial ratio of 1:1*/
-    width: 100%; }
-
-/**
- * Modifier: 3:1 aspect ratio
- */
-.embedded--3by1:before {
-  padding-bottom: 33%; }
-
-/**
- * Modifier: 2:1 aspect ratio
- */
-.embedded--2by1:before {
-  padding-bottom: 50%; }
-
-/**
- * Modifier: 16:9 aspect ratio
- */
-.embedded--16by9:before {
-  padding-bottom: 56.25%; }
-
-/**
- * Modifier: 4:3 aspect ratio
- */
-.embedded--4by3:before {
-  padding-bottom: 75%; }
-
-.embedded--center .embedded__item,
-.embedded--center video,
-.embedded--center iframe,
-.embedded--center embed,
-.embedded--center object {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%; }
-  .embedded--center .embedded__item:-webkit-full-screen, .embedded--center .embedded__item:-moz-full-screen,
-  .embedded--center .embedded__item:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
-  .embedded--center video:-webkit-full-screen,
-  .embedded--center video:-moz-full-screen,
-  .embedded--center video:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
-  .embedded--center iframe:-webkit-full-screen,
-  .embedded--center iframe:-moz-full-screen,
-  .embedded--center iframe:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
-  .embedded--center embed:-webkit-full-screen,
-  .embedded--center embed:-moz-full-screen,
-  .embedded--center embed:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
-  .embedded--center object:-webkit-full-screen,
-  .embedded--center object:-moz-full-screen,
-  .embedded--center object:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
-  .embedded--center .embedded__item:-ms-fullscreen
-  .embedded--center video:fullscreen,
-  .embedded--center video:-ms-fullscreen
-  .embedded--center video:fullscreen,
-  .embedded--center iframe:-ms-fullscreen
-  .embedded--center video:fullscreen,
-  .embedded--center embed:-ms-fullscreen
-  .embedded--center video:fullscreen,
-  .embedded--center object:-ms-fullscreen
-  .embedded--center video:fullscreen,
-  .embedded--center .embedded__item:-ms-fullscreen
-  .embedded--center iframe:fullscreen,
-  .embedded--center video:-ms-fullscreen
-  .embedded--center iframe:fullscreen,
-  .embedded--center iframe:-ms-fullscreen
-  .embedded--center iframe:fullscreen,
-  .embedded--center embed:-ms-fullscreen
-  .embedded--center iframe:fullscreen,
-  .embedded--center object:-ms-fullscreen
-  .embedded--center iframe:fullscreen,
-  .embedded--center .embedded__item:-ms-fullscreen
-  .embedded--center embed:fullscreen,
-  .embedded--center video:-ms-fullscreen
-  .embedded--center embed:fullscreen,
-  .embedded--center iframe:-ms-fullscreen
-  .embedded--center embed:fullscreen,
-  .embedded--center embed:-ms-fullscreen
-  .embedded--center embed:fullscreen,
-  .embedded--center object:-ms-fullscreen
-  .embedded--center embed:fullscreen,
-  .embedded--center .embedded__item:-ms-fullscreen
-  .embedded--center object:fullscreen,
-  .embedded--center video:-ms-fullscreen
-  .embedded--center object:fullscreen,
-  .embedded--center iframe:-ms-fullscreen
-  .embedded--center object:fullscreen,
-  .embedded--center embed:-ms-fullscreen
-  .embedded--center object:fullscreen,
-  .embedded--center object:-ms-fullscreen
-  .embedded--center object:fullscreen {
-    transform: translate(0, 0);
-    top: 0;
-    left: 0; }
-
-/*------------------------------------*\
-    #ICONS
-\*------------------------------------*/
-.icon {
-  display: inline-block;
-  fill: currentColor;
-  height: 16px;
-  vertical-align: middle;
-  width: 16px; }
-
-.underline:after {
-  content: '';
-  height: 5px;
-  width: 130px;
-  background-color: #ff8700;
-  display: block;
-  margin-top: 10px; }
-
-.underline--white:after {
-  background-color: #fff; }
-
-.underline--yellow:after {
-  background-color: #ecdec3; }
-
-.underline--center:after {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; }
-
-/*------------------------------------*    #TABLEIZE
-\*------------------------------------*/
-/**
- * The `.tableize__content` serves as container for cell content. If you need
- * width or padding set on a cell, make sure you set it to `.tableize__content`
- * instead since that is what makes the whole thing work. That being said
- * `.tableize__content` is optional.
-
-   <div class="tableize">
-     <div class="tableize__cell">
-       <div class="tableize__content">
-         cell content
-       </div>
-     </div>
-     <div class="tableize__cell">
-       <div class="tableize__content">
-         cell content
-       </div>
-     </div>
-   </div>
- */
-.tableize {
-  display: table;
-  width: 100%; }
-
-/**
-     * Tableize cell.
-     */
-.tableize__cell {
-  display: table-cell;
-  vertical-align: top; }
-
-/**
-     * Filler cell. There is no need for using this class if parent `.tableize`
-     * has `.tableize--fixed` modifier.
-     *
-     * 1. Fills the rest of the row when one or more cells have fixed width.
-     */
-.tableize__cell--fill {
-  width: 100%;
-  /* [1] */ }
-
-/**
-     * Middle tableize aligns tableize cell to their middles.
-     */
-.tableize--middle > .tableize__cell {
-  vertical-align: middle; }
-
-/**
-     * Bottom tableize aligns tableize cell to their bottom.
-     */
-.tableize--bottom > .tableize__cell {
-  vertical-align: bottom; }
-
-/**
-     * Fixed tableize makes:
-     * - all cells occupy equal width or
-     * - if one (or more) cells are fixed (or percentage base) width
-     *   the remaining columns will occupy rest of the available space.
-     *
-     * More info about `table-layout: fixed;` at
-     * http://css-tricks.com/fixing-tables-long-strings/
-     */
-.tableize--fixed {
-  table-layout: fixed; }
-
-/**
-     * Full height tableize.
-     */
-.tableize--full {
-  height: 100%; }
-
-.tableize--full > .tableize__cell,
-.tableize--full > .tableize__cell > .tableize__content {
-  height: inherit; }
-
-/* --------------------------------------------------------------------------------------
-+
-+ JUSTIFIZE
-+
--------------------------------------------------------------------------------------- */
-/*
-    http://www.css-101.org/articles/responsive-boxes/magic-boxes.php
-
-    <div class="justifize">
-      <div class="justifize__box">
-        justifize box content
-      </div>
-      <div class="justifize__box">
-        justifize box content
-      </div>
-      <div class="justifize__box">
-        justifize box content
-      </div>
-    </div>
-*/
-.justifize {
-  font-size: 1px;
-  /* IE 9, 10, 11 FIX */
-  text-align: justify; }
-
-.justifize:after {
-  content: "";
-  display: inline-block;
-  width: 100%; }
-
-.justifize__box {
-  font-size: 16px;
-  font-size: 1rem;
-  /* font size for html element MUST be set to 10px for this to work */
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle; }
-
-.justifize--top .justifize__box {
-  vertical-align: top; }
-
-.justifize--bottom .justifize__box {
-  vertical-align: bottom; }
-
-/*------------------------------------*    #FLAG
-\*------------------------------------*/
-/**
- * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
- * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
- */
-/**
- * 1. Allows us to control vertical alignments
- * 2. Force the object to be the full width of its parent. Combined with [1],
- *    this makes the object behave in a quasi-`display: block;` manner.
- */
-.flag {
-  display: table;
-  /* [1] */
-  width: 100%;
-  /* [2] */ }
-
-/**
-     * Items within a flag object. There should only ever be one of each.
-     *
-     * 1. Default to aligning content to their middles.
-     */
-.flag__img,
-.flag__body {
-  display: table-cell;
-  vertical-align: middle;
-  /* [1] */ }
-
-/**
-     * Flag images have a space between them and the body of the object.
-     */
-.flag__img {
-  padding-right: 22px; }
-
-.flag__img > img {
-  display: block;
-  max-width: none; }
-
-/**
-     * The container for the main content of the flag object.
-     *
-     * 1. Forces the `.flag__body` to take up all remaining space.
-     */
-.flag__body {
-  width: 100%;
-  /* [1] */ }
-
-.flag__body,
-.flag__body > :last-child {
-  margin-bottom: 0; }
-
-/**
-     * Tiny flags.
-     */
-.flag--tiny {
-  /**
-             * Tiny reversed flags.
-             */ }
-
-.flag--tiny > .flag__img {
-  padding-right: 6px; }
-
-.flag--tiny.flag--rev > .flag__img {
-  padding-right: 0;
-  padding-left: 6px; }
-
-/**
-     * Small flags.
-     */
-.flag--small {
-  /**
-             * Small reversed flags.
-             */ }
-
-.flag--small > .flag__img {
-  padding-right: 11px; }
-
-.flag--small.flag--rev > .flag__img {
-  padding-right: 0;
-  padding-left: 11px; }
-
-/**
-     * Large flags.
-     */
-.flag--large {
-  /**
-             * Large reversed flags.
-             */ }
-
-.flag--large > .flag__img {
-  padding-right: 44px; }
-
-.flag--large.flag--rev > .flag__img {
-  padding-right: 0;
-  padding-left: 44px; }
-
-/**
-     * Huge flags.
-     */
-.flag--huge {
-  /**
-             * Huge reversed flags.
-             */ }
-
-.flag--huge > .flag__img {
-  padding-right: 88px; }
-
-.flag--huge.flag--rev > .flag__img {
-  padding-right: 0;
-  padding-left: 88px; }
-
-/**
-     * Reversed flag objects have their image-content to the right, and text-content
-     * to the left.
-     *
-     * 1. Swap the rendered direction of the object…
-     * 2. …and reset it.
-     * 3. Reassign margins to the correct sides.
-     */
-.flag--rev {
-  direction: rtl;
-  /* [1] */ }
-
-.flag--rev > .flag__img,
-.flag--rev > .flag__body {
-  direction: ltr;
-  /* [2] */ }
-
-.flag--rev > .flag__img {
-  padding-right: 0;
-  /* [3] */
-  padding-left: 22px;
-  /* [3] */ }
-
-/**
-     * Flush flag objects have no space between the image- and text-content.
-     */
-.flag--flush > .flag__img {
-  padding-right: 0;
-  padding-left: 0; }
-
-/**
-     * Vertically top aligned flag objects.
-     */
-.flag--top > .flag__img,
-.flag--top > .flag__body {
-  vertical-align: top; }
-
-/**
-     * Vertically bottom aligned flag objects.
-     */
-.flag--bottom > .flag__img,
-.flag--bottom > .flag__body {
-  vertical-align: bottom; }
-
-/**
-     * Responsive flag objects.
-     *
-     * There is a very pragmatic, simple implementation of a responsive flag
-     * object, which simply places the text-content beneath the image-content.
-     *
-     * We use a `max-width` media query because:
-     *
-     * a) it is the least verbose method in terms of amount of code required.
-     * b) the flag object’s default state is image-next-to-text, so its stacked
-     *    state is the exception, rather than the rule.
-     */
-@media screen and (max-width: 720px) {
-  .flag--responsive {
-    /**
-                 * Disable reversal of content because there is no concept of
-                 * ‘reversed’ in a stacked layout.
-                 */
-    direction: ltr;
-    /**
-             * Rework the spacings on regular flag objects.
-             */
-    /**
-                 * Tiny responsive flags.
-                 *
-                 * Take a little more heavy-handed approach to reworking
-                 * spacings on flags that are also tiny flags in their regular
-                 * state.
-                 */
-    /**
-                 * Small responsive flags.
-                 *
-                 * Take a little more heavy-handed approach to reworking
-                 * spacings on flags that are also small flags in their regular
-                 * state.
-                 */
-    /**
-                 * Large responsive flags.
-                 *
-                 * Take a little more heavy-handed approach to reworking
-                 * spacings on flags that are also large flags in their regular
-                 * state.
-                 */
-    /**
-                 * Huge responsive flags.
-                 *
-                 * Take a little more heavy-handed approach to reworking
-                 * spacings on flags that are also huge flags in their regular
-                 * state.
-                 */ }
-  .flag--responsive,
-  .flag--responsive > .flag__img,
-  .flag--responsive > .flag__body {
-    display: block; }
-  .flag--responsive > .flag__img {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 22px; }
-  .flag--responsive.flag--tiny > .flag__img {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 6px; }
-  .flag--responsive.flag--small > .flag__img {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 11px; }
-  .flag--responsive.flag--large > .flag__img {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 44px; }
-  .flag--responsive.flag--huge > .flag__img {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 88px; } }
-
-/*------------------------------------*    #MEDIA
-\*------------------------------------*/
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- */
-.media {
-  display: block; }
-
-.media__img {
-  float: left;
-  margin-right: 22px; }
-
-.media__img > img {
-  display: block; }
-
-.media__body {
-  overflow: hidden;
-  display: block; }
-
-.media__body,
-.media__body > :last-child {
-  margin-bottom: 0; }
-
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -8686,6 +7983,712 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+/* --------------------------------------------------------------------------------------
++
++ BUTTONS
++
+-------------------------------------------------------------------------------------- */
+.btn {
+  transition: all .2s ease;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background: none;
+  border: none;
+  display: inline-block;
+  line-height: normal;
+  margin: 0;
+  /* remove margin for some browsers */
+  padding: 0;
+  /* remove padding in Firefox */
+  text-decoration: none;
+  text-shadow: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .btn:hover {
+    cursor: pointer;
+    text-decoration: none; }
+
+.btn--full {
+  box-sizing: border-box;
+  display: block !important;
+  width: 100% !important;
+  /* force 100% width for <button> */ }
+
+/*------------------------------------*\
+    #TABLEIZE
+\*------------------------------------*/
+/**
+ * The `.tableize__content` serves as container for cell content. If you need
+ * width or padding set on a cell, make sure you set it to `.tableize__content`
+ * instead since that is what makes the whole thing work. That being said
+ * `.tableize__content` is optional.
+
+   <div class="tableize">
+     <div class="tableize__cell">
+       <div class="tableize__content">
+         cell content
+       </div>
+     </div>
+     <div class="tableize__cell">
+       <div class="tableize__content">
+         cell content
+       </div>
+     </div>
+   </div>
+ */
+.tableize {
+  display: table;
+  width: 100%; }
+
+/**
+     * Tableize cell.
+     */
+.tableize__cell {
+  display: table-cell;
+  vertical-align: top; }
+
+/**
+     * Filler cell. There is no need for using this class if parent `.tableize`
+     * has `.tableize--fixed` modifier.
+     *
+     * 1. Fills the rest of the row when one or more cells have fixed width.
+     */
+.tableize__cell--fill {
+  width: 100%;
+  /* [1] */ }
+
+/**
+     * Middle tableize aligns tableize cell to their middles.
+     */
+.tableize--middle > .tableize__cell {
+  vertical-align: middle; }
+
+/**
+     * Bottom tableize aligns tableize cell to their bottom.
+     */
+.tableize--bottom > .tableize__cell {
+  vertical-align: bottom; }
+
+/**
+     * Fixed tableize makes:
+     * - all cells occupy equal width or
+     * - if one (or more) cells are fixed (or percentage base) width
+     *   the remaining columns will occupy rest of the available space.
+     *
+     * More info about `table-layout: fixed;` at
+     * http://css-tricks.com/fixing-tables-long-strings/
+     */
+.tableize--fixed {
+  table-layout: fixed; }
+
+/**
+     * Full height tableize.
+     */
+.tableize--full {
+  height: 100%; }
+  .tableize--full > .tableize__cell,
+  .tableize--full > .tableize__cell > .tableize__content {
+    height: inherit; }
+
+/* --------------------------------------------------------------------------------------
++
++ JUSTIFIZE
++
+-------------------------------------------------------------------------------------- */
+/*
+    http://www.css-101.org/articles/responsive-boxes/magic-boxes.php
+
+    <div class="justifize">
+      <div class="justifize__box">
+        justifize box content
+      </div>
+      <div class="justifize__box">
+        justifize box content
+      </div>
+      <div class="justifize__box">
+        justifize box content
+      </div>
+    </div>
+*/
+.justifize {
+  font-size: 1px;
+  /* IE 9, 10, 11 FIX */
+  text-align: justify; }
+  .justifize:after {
+    content: "";
+    display: inline-block;
+    width: 100%; }
+
+.justifize__box {
+  font-size: 16px;
+  font-size: 1rem;
+  /* font size for html element MUST be set to 10px for this to work */
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle; }
+  .justifize--top .justifize__box {
+    vertical-align: top; }
+  .justifize--bottom .justifize__box {
+    vertical-align: bottom; }
+
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
+.container {
+  margin: 0 auto;
+  max-width: 1188px;
+  padding-left: 24px;
+  padding-right: 24px; }
+  @media screen and (max-width: 480px) {
+    .container {
+      max-width: 1164px;
+      padding-left: 12px;
+      padding-right: 12px; } }
+
+.container--small {
+  max-width: 780px; }
+
+/*------------------------------------*\
+    #EMBEDDED
+\*------------------------------------*/
+/*
+    BASED ON https://github.com/suitcss/components-flex-embed/blob/master/flex-embed.css, mashed up with http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+
+    <div class="embedded">
+      [iframe|object|embed]
+    </div>
+*/
+.embedded {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  /**
+     * Descendant: media element
+     *
+     * Utility of the component is improved by provide an explicit descendant
+     * class. However, it will work automatically for iframes, embeds, and objects
+     * to account for times when you cannot modify the attributes for 3rd party
+     * widget code.
+     */
+  /**
+     * A pseudo-element shunt is used to provide support for `max-height`. The
+     * `max-height` property has no affect when using a percentage-padding to set
+     * the aspect ratio.
+     */ }
+  .embedded .embedded__item,
+  .embedded video,
+  .embedded iframe,
+  .embedded embed,
+  .embedded object {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .embedded:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    /* initial ratio of 1:1*/
+    width: 100%; }
+
+/**
+ * Modifier: 3:1 aspect ratio
+ */
+.embedded--3by1:before {
+  padding-bottom: 33%; }
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+.embedded--2by1:before {
+  padding-bottom: 50%; }
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+.embedded--16by9:before {
+  padding-bottom: 56.25%; }
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+.embedded--4by3:before {
+  padding-bottom: 75%; }
+
+.embedded--center .embedded__item,
+.embedded--center video,
+.embedded--center iframe,
+.embedded--center embed,
+.embedded--center object {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+  .embedded--center .embedded__item:-webkit-full-screen, .embedded--center .embedded__item:-moz-full-screen,
+  .embedded--center .embedded__item:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
+  .embedded--center video:-webkit-full-screen,
+  .embedded--center video:-moz-full-screen,
+  .embedded--center video:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
+  .embedded--center iframe:-webkit-full-screen,
+  .embedded--center iframe:-moz-full-screen,
+  .embedded--center iframe:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
+  .embedded--center embed:-webkit-full-screen,
+  .embedded--center embed:-moz-full-screen,
+  .embedded--center embed:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
+  .embedded--center object:-webkit-full-screen,
+  .embedded--center object:-moz-full-screen,
+  .embedded--center object:-ms-fullscreen .embedded--center .embedded__item:fullscreen,
+  .embedded--center .embedded__item:-ms-fullscreen
+  .embedded--center video:fullscreen,
+  .embedded--center video:-ms-fullscreen
+  .embedded--center video:fullscreen,
+  .embedded--center iframe:-ms-fullscreen
+  .embedded--center video:fullscreen,
+  .embedded--center embed:-ms-fullscreen
+  .embedded--center video:fullscreen,
+  .embedded--center object:-ms-fullscreen
+  .embedded--center video:fullscreen,
+  .embedded--center .embedded__item:-ms-fullscreen
+  .embedded--center iframe:fullscreen,
+  .embedded--center video:-ms-fullscreen
+  .embedded--center iframe:fullscreen,
+  .embedded--center iframe:-ms-fullscreen
+  .embedded--center iframe:fullscreen,
+  .embedded--center embed:-ms-fullscreen
+  .embedded--center iframe:fullscreen,
+  .embedded--center object:-ms-fullscreen
+  .embedded--center iframe:fullscreen,
+  .embedded--center .embedded__item:-ms-fullscreen
+  .embedded--center embed:fullscreen,
+  .embedded--center video:-ms-fullscreen
+  .embedded--center embed:fullscreen,
+  .embedded--center iframe:-ms-fullscreen
+  .embedded--center embed:fullscreen,
+  .embedded--center embed:-ms-fullscreen
+  .embedded--center embed:fullscreen,
+  .embedded--center object:-ms-fullscreen
+  .embedded--center embed:fullscreen,
+  .embedded--center .embedded__item:-ms-fullscreen
+  .embedded--center object:fullscreen,
+  .embedded--center video:-ms-fullscreen
+  .embedded--center object:fullscreen,
+  .embedded--center iframe:-ms-fullscreen
+  .embedded--center object:fullscreen,
+  .embedded--center embed:-ms-fullscreen
+  .embedded--center object:fullscreen,
+  .embedded--center object:-ms-fullscreen
+  .embedded--center object:fullscreen {
+    transform: translate(0, 0);
+    top: 0;
+    left: 0; }
+
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 16px;
+  vertical-align: middle;
+  width: 16px; }
+
+.underline:after {
+  content: '';
+  height: 5px;
+  width: 130px;
+  background-color: #ff8700;
+  display: block;
+  margin-top: 10px; }
+
+.underline--white:after {
+  background-color: #fff; }
+
+.underline--yellow:after {
+  background-color: #ecdec3; }
+
+.underline--center:after {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*------------------------------------*    #TABLEIZE
+\*------------------------------------*/
+/**
+ * The `.tableize__content` serves as container for cell content. If you need
+ * width or padding set on a cell, make sure you set it to `.tableize__content`
+ * instead since that is what makes the whole thing work. That being said
+ * `.tableize__content` is optional.
+
+   <div class="tableize">
+     <div class="tableize__cell">
+       <div class="tableize__content">
+         cell content
+       </div>
+     </div>
+     <div class="tableize__cell">
+       <div class="tableize__content">
+         cell content
+       </div>
+     </div>
+   </div>
+ */
+.tableize {
+  display: table;
+  width: 100%; }
+
+/**
+     * Tableize cell.
+     */
+.tableize__cell {
+  display: table-cell;
+  vertical-align: top; }
+
+/**
+     * Filler cell. There is no need for using this class if parent `.tableize`
+     * has `.tableize--fixed` modifier.
+     *
+     * 1. Fills the rest of the row when one or more cells have fixed width.
+     */
+.tableize__cell--fill {
+  width: 100%;
+  /* [1] */ }
+
+/**
+     * Middle tableize aligns tableize cell to their middles.
+     */
+.tableize--middle > .tableize__cell {
+  vertical-align: middle; }
+
+/**
+     * Bottom tableize aligns tableize cell to their bottom.
+     */
+.tableize--bottom > .tableize__cell {
+  vertical-align: bottom; }
+
+/**
+     * Fixed tableize makes:
+     * - all cells occupy equal width or
+     * - if one (or more) cells are fixed (or percentage base) width
+     *   the remaining columns will occupy rest of the available space.
+     *
+     * More info about `table-layout: fixed;` at
+     * http://css-tricks.com/fixing-tables-long-strings/
+     */
+.tableize--fixed {
+  table-layout: fixed; }
+
+/**
+     * Full height tableize.
+     */
+.tableize--full {
+  height: 100%; }
+
+.tableize--full > .tableize__cell,
+.tableize--full > .tableize__cell > .tableize__content {
+  height: inherit; }
+
+/* --------------------------------------------------------------------------------------
++
++ JUSTIFIZE
++
+-------------------------------------------------------------------------------------- */
+/*
+    http://www.css-101.org/articles/responsive-boxes/magic-boxes.php
+
+    <div class="justifize">
+      <div class="justifize__box">
+        justifize box content
+      </div>
+      <div class="justifize__box">
+        justifize box content
+      </div>
+      <div class="justifize__box">
+        justifize box content
+      </div>
+    </div>
+*/
+.justifize {
+  font-size: 1px;
+  /* IE 9, 10, 11 FIX */
+  text-align: justify; }
+
+.justifize:after {
+  content: "";
+  display: inline-block;
+  width: 100%; }
+
+.justifize__box {
+  font-size: 16px;
+  font-size: 1rem;
+  /* font size for html element MUST be set to 10px for this to work */
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle; }
+
+.justifize--top .justifize__box {
+  vertical-align: top; }
+
+.justifize--bottom .justifize__box {
+  vertical-align: bottom; }
+
+/*------------------------------------*    #FLAG
+\*------------------------------------*/
+/**
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+ */
+/**
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.flag {
+  display: table;
+  /* [1] */
+  width: 100%;
+  /* [2] */ }
+
+/**
+     * Items within a flag object. There should only ever be one of each.
+     *
+     * 1. Default to aligning content to their middles.
+     */
+.flag__img,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+  /* [1] */ }
+
+/**
+     * Flag images have a space between them and the body of the object.
+     */
+.flag__img {
+  padding-right: 22px; }
+
+.flag__img > img {
+  display: block;
+  max-width: none; }
+
+/**
+     * The container for the main content of the flag object.
+     *
+     * 1. Forces the `.flag__body` to take up all remaining space.
+     */
+.flag__body {
+  width: 100%;
+  /* [1] */ }
+
+.flag__body,
+.flag__body > :last-child {
+  margin-bottom: 0; }
+
+/**
+     * Tiny flags.
+     */
+.flag--tiny {
+  /**
+             * Tiny reversed flags.
+             */ }
+
+.flag--tiny > .flag__img {
+  padding-right: 6px; }
+
+.flag--tiny.flag--rev > .flag__img {
+  padding-right: 0;
+  padding-left: 6px; }
+
+/**
+     * Small flags.
+     */
+.flag--small {
+  /**
+             * Small reversed flags.
+             */ }
+
+.flag--small > .flag__img {
+  padding-right: 11px; }
+
+.flag--small.flag--rev > .flag__img {
+  padding-right: 0;
+  padding-left: 11px; }
+
+/**
+     * Large flags.
+     */
+.flag--large {
+  /**
+             * Large reversed flags.
+             */ }
+
+.flag--large > .flag__img {
+  padding-right: 44px; }
+
+.flag--large.flag--rev > .flag__img {
+  padding-right: 0;
+  padding-left: 44px; }
+
+/**
+     * Huge flags.
+     */
+.flag--huge {
+  /**
+             * Huge reversed flags.
+             */ }
+
+.flag--huge > .flag__img {
+  padding-right: 88px; }
+
+.flag--huge.flag--rev > .flag__img {
+  padding-right: 0;
+  padding-left: 88px; }
+
+/**
+     * Reversed flag objects have their image-content to the right, and text-content
+     * to the left.
+     *
+     * 1. Swap the rendered direction of the object…
+     * 2. …and reset it.
+     * 3. Reassign margins to the correct sides.
+     */
+.flag--rev {
+  direction: rtl;
+  /* [1] */ }
+
+.flag--rev > .flag__img,
+.flag--rev > .flag__body {
+  direction: ltr;
+  /* [2] */ }
+
+.flag--rev > .flag__img {
+  padding-right: 0;
+  /* [3] */
+  padding-left: 22px;
+  /* [3] */ }
+
+/**
+     * Flush flag objects have no space between the image- and text-content.
+     */
+.flag--flush > .flag__img {
+  padding-right: 0;
+  padding-left: 0; }
+
+/**
+     * Vertically top aligned flag objects.
+     */
+.flag--top > .flag__img,
+.flag--top > .flag__body {
+  vertical-align: top; }
+
+/**
+     * Vertically bottom aligned flag objects.
+     */
+.flag--bottom > .flag__img,
+.flag--bottom > .flag__body {
+  vertical-align: bottom; }
+
+/**
+     * Responsive flag objects.
+     *
+     * There is a very pragmatic, simple implementation of a responsive flag
+     * object, which simply places the text-content beneath the image-content.
+     *
+     * We use a `max-width` media query because:
+     *
+     * a) it is the least verbose method in terms of amount of code required.
+     * b) the flag object’s default state is image-next-to-text, so its stacked
+     *    state is the exception, rather than the rule.
+     */
+@media screen and (max-width: 720px) {
+  .flag--responsive {
+    /**
+                 * Disable reversal of content because there is no concept of
+                 * ‘reversed’ in a stacked layout.
+                 */
+    direction: ltr;
+    /**
+             * Rework the spacings on regular flag objects.
+             */
+    /**
+                 * Tiny responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also tiny flags in their regular
+                 * state.
+                 */
+    /**
+                 * Small responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also small flags in their regular
+                 * state.
+                 */
+    /**
+                 * Large responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also large flags in their regular
+                 * state.
+                 */
+    /**
+                 * Huge responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also huge flags in their regular
+                 * state.
+                 */ }
+  .flag--responsive,
+  .flag--responsive > .flag__img,
+  .flag--responsive > .flag__body {
+    display: block; }
+  .flag--responsive > .flag__img {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 22px; }
+  .flag--responsive.flag--tiny > .flag__img {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 6px; }
+  .flag--responsive.flag--small > .flag__img {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 11px; }
+  .flag--responsive.flag--large > .flag__img {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 44px; }
+  .flag--responsive.flag--huge > .flag__img {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 88px; } }
+
+/*------------------------------------*    #MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+.media {
+  display: block; }
+
+.media__img {
+  float: left;
+  margin-right: 22px; }
+
+.media__img > img {
+  display: block; }
+
+.media__body {
+  overflow: hidden;
+  display: block; }
+
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0; }
+
 /*------------------------------------*\
     #FOOTER MAIN
 \*------------------------------------*/
@@ -9270,7 +9273,7 @@ a.text-dark:hover, a.text-dark:focus {
   background: none; }
 
 .subscribe--investor {
-  background-image: url("../images/investor-subscribe-bgr.jpg");
+  background-image: url("../img/investor-subscribe-bgr.jpg");
   background-repeat: no-repeat; }
   .subscribe--investor h2,
   .subscribe--investor p {
@@ -9532,7 +9535,7 @@ a.text-dark:hover, a.text-dark:focus {
     .aside-links .input-wrap:after,
     .aside-subscribe .input-wrap:after {
       content: '';
-      background-image: url("../images/search.png");
+      background-image: url("../img/search.png");
       width: 23px;
       height: 25px;
       display: block;
@@ -9920,9 +9923,11 @@ a.text-dark:hover, a.text-dark:focus {
     right: 0px;
     padding: 10px;
     font-size: 14px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    cursor: pointer; }
   .faq-form p {
-    color: #333; }
+    color: #333;
+    text-align: center; }
   .faq-form .input,
   .faq-form .input--textarea {
     margin-bottom: 20px;
@@ -9954,6 +9959,10 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 10px; }
   .faq-form a {
     margin-bottom: 20px; }
+  .faq-form .btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -10179,11 +10188,11 @@ a.text-dark:hover, a.text-dark:focus {
     .text-slider .slick-next:focus {
       outline: none; }
   .text-slider .slick-prev {
-    background-image: url("../images/prev.png");
+    background-image: url("../img/prev.png");
     z-index: 10;
     left: 0; }
   .text-slider .slick-next {
-    background-image: url("../images/next.png");
+    background-image: url("../img/next.png");
     right: 0; }
 
 .text-slider__content {
@@ -10212,6 +10221,9 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 16px; }
 
 .social-boxes__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 73px;
   background-color: #bfbfbf;
   transition: all .1s ease;
@@ -10219,8 +10231,10 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 7px;
   margin-right: 7px;
   height: 30px;
-  line-height: 30px; }
+  line-height: 30px;
+  color: white; }
   .social-boxes__item:hover {
+    color: white;
     width: 198px;
     transition: all .3s ease;
     text-decoration: none; }

@@ -14,3 +14,7 @@
 	    padding-right: $spacing-unit/2;
     }
 }
+
+.container--small {
+    max-width: $page-max-width--medium;
+}

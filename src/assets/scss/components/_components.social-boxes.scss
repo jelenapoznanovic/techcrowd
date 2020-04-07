@@ -16,6 +16,9 @@
 	}
 
 	.social-boxes__item {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: 73px;
 		background-color: #bfbfbf;
 		transition: all .1s ease;
@@ -24,9 +27,11 @@
 		margin-right: 7px;
 		height: 30px;
 		line-height: 30px;
-
-
+		color: white;
+		
+		
 		&:hover {
+			color: white;
 			width: 198px;
 			transition: all .3s ease;
 			text-decoration: none;

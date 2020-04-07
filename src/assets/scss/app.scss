@@ -30,6 +30,7 @@
 @import './base/base.type';
 @import './base/base.links';
 @import './_starterized/starterized-base/base.links';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // Objects
 @import './_starterized/starterized-objects/objects.buttons';
@@ -41,7 +42,6 @@
 @import './objects/objects.underline';
 @import './objects/objects.helper-classes';
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './components/components.footer-main';
 @import './components/components.header-main';
 @import './components/components.inputs';
