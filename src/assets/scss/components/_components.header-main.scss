@@ -16,32 +16,12 @@
 		background-color: transparent;
 	}
 
-	.navbar-light {
-
-		.navbar-nav {
-			padding-top: 15px;
-
-			.nav-link {
-				display: inline-block;
-				vertical-align: middle;
-				font-size: 18px;
-				color: #ecdec3;
-
-			}
-
-			@include min-screen(992px) {
-				padding-top: 0;
-			}
-		}
-
-	}
-
-	.navbar {
-		padding: 0;
-	}
-
 	.navbar-brand {
 		padding: 0;
+
+		 img {
+			 display: block;
+		 }
 
 		@include max-screen(370px) {
 			width: 150px;
@@ -73,20 +53,6 @@
 
 	.nav-item {
 		position: relative;
-
-		.dropdown {
-			display: none;
-			background-color: #222;
-			padding-left: 20px;
-
-			@include min-screen(992px) {
-				padding-left: 0;
-				position: absolute;
-				left: 0;
-				top: 100%;
-				width: 100%;
-			}
-		}
 	}
 
 	.nav-item--dropdown-icon {
@@ -103,11 +69,77 @@
 			float: none;
 		}
 	}
+	
+	.main-nav {
+		
+		li {
+			display: inline-block;
+			margin-left: 25px;
+		}
+	}
+	
+.navbar-expand-lg {
+	
+	@include min-screen(992px) {
+		
+		.navbar-collapse  {
+			justify-content: flex-end;
+		}
+	}
+}
 
-.main-nav {
+.navbar {
+	padding: 0;
+	
+	.navbar-toggler {
+		border: none;
+	}
 
-	li {
-		display: inline-block;
-		margin-left: 25px;
+	.dropdown-menu {
+		left: auto;
+		right: 0;
+
+		@include min-screen(992px) {
+			.nav-link {
+				color: #222 !important;
+				text-align: right;
+				padding-left: 25px;
+				padding-right: 25px;
+
+				&:hover {
+					color: lighten(#222, 50%) !important
+				}
+			}
+		}
+	}
+	
+	@include max-screen(991px) {
+		
+		.dropdown-menu {
+			background-color: transparent;
+			border: none;
+			
+			a {
+				color: rgba(255, 255, 255, 0.5);
+				
+				&:hover {
+					color: white;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+} 
+
+.navbar-nav {
+	
+	@include max-screen(991px) {
+		padding-top: 20px;
+		align-items: flex-end;
+
+		.dropdown-menu,
+		.nav-item {
+			text-align: right;
+		}
 	}
 }

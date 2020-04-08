@@ -8783,20 +8783,10 @@ a.text-dark:hover, a.text-dark:focus {
       overflow: visible; } }
   .header-main .bg-faded {
     background-color: transparent; }
-  .header-main .navbar-light .navbar-nav {
-    padding-top: 15px; }
-    .header-main .navbar-light .navbar-nav .nav-link {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 18px;
-      color: #ecdec3; }
-    @media screen and (min-width: 992px) {
-      .header-main .navbar-light .navbar-nav {
-        padding-top: 0; } }
-  .header-main .navbar {
-    padding: 0; }
   .header-main .navbar-brand {
     padding: 0; }
+    .header-main .navbar-brand img {
+      display: block; }
     @media screen and (max-width: 370px) {
       .header-main .navbar-brand {
         width: 150px; } }
@@ -8817,17 +8807,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .nav-item {
   position: relative; }
-  .nav-item .dropdown {
-    display: none;
-    background-color: #222;
-    padding-left: 20px; }
-    @media screen and (min-width: 992px) {
-      .nav-item .dropdown {
-        padding-left: 0;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%; } }
 
 .nav-item--dropdown-icon {
   display: inline-block;
@@ -8845,6 +8824,43 @@ a.text-dark:hover, a.text-dark:focus {
 .main-nav li {
   display: inline-block;
   margin-left: 25px; }
+
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end; } }
+
+.navbar {
+  padding: 0; }
+  .navbar .navbar-toggler {
+    border: none; }
+  .navbar .dropdown-menu {
+    left: auto;
+    right: 0; }
+    @media screen and (min-width: 992px) {
+      .navbar .dropdown-menu .nav-link {
+        color: #222 !important;
+        text-align: right;
+        padding-left: 25px;
+        padding-right: 25px; }
+        .navbar .dropdown-menu .nav-link:hover {
+          color: #a2a2a2 !important; } }
+  @media screen and (max-width: 991px) {
+    .navbar .dropdown-menu {
+      background-color: transparent;
+      border: none; }
+      .navbar .dropdown-menu a {
+        color: rgba(255, 255, 255, 0.5); }
+        .navbar .dropdown-menu a:hover {
+          color: white;
+          background-color: transparent; } }
+
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 20px;
+    align-items: flex-end; }
+    .navbar-nav .dropdown-menu,
+    .navbar-nav .nav-item {
+      text-align: right; } }
 
 /*------------------------------------*\
     #INPUTS
