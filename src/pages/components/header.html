@@ -51,22 +51,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="group.html">about <span class="sr-only">(current)</span></a>
+                <li {% if group %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
+                    <a class="nav-link" href="group.html">about</a>
+                    
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="companies.html">companies <span class="sr-only">(current)</span></a>
+
+                <li {% if companies %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
+                    <a class="nav-link" href="companies.html">companies</a>
                 </li>
-                <li class="nav-item">
+                <li {% if investor %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
                   <a class="nav-link" href="investor.html">investor groups</a>
                 </li>
-                <li class="nav-item">
+                <li {% if blog %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
                   <a class="nav-link" href="blog.html">blog</a>
                 </li>
-                <li class="nav-item">
+                <li {% if login %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
                     <a class="nav-link" href="log-in.html">log in</a>
                 </li>
-                <li class="nav-item">
+                <li {% if register %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
                     <a class="nav-link" href="register.html">register</a>
                 </li>
                 <li class="nav-item dropdown">

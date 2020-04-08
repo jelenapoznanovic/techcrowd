@@ -1,10 +1,11 @@
 {% extends "layouts/default.html" %}
 {% set title = "Group" %}
 {% set page = "group" %}
+{% set group = true %}
 
 
 {% block content %}
-    {% include "./components/header.html" -%}
+{% include "./components/header.html" -%}
     
 	<main>
 
@@ -27,12 +28,9 @@
 									<span>393</span>
 									<p>Group members</p>
 								</div>
-								<ul class="social-icons">
-									<li><a href=""><img src="assets/img/fb.png"></a></li>
-									<li><a href=""><img src="assets/img/tw.png"></a></li>
-									<li><a href=""><img src="assets/img/in.png"></a></li>
-									<li><a href=""><img src="assets/img/g+.png"></a></li>
-								</ul>
+								
+								{{ allMacros.social('social--small social--left') }}
+
 								<a href="" class="btn btn--primary btn--medium">join group</a>
 							</div>
 						</div>
