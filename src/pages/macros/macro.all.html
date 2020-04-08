@@ -44,7 +44,7 @@
 {% macro groupMembers(imgUrl, title) %}
 	<div class="group__members-item">
 		<div class="img-wrap">
-			<img src="img/{{ imgUrl }}">
+			<img src="assets/img/{{ imgUrl }}">
 		</div>
 		<h4 class="text-center">{{ title }}</h4>
 	</div>
@@ -53,11 +53,46 @@
 
 
 {% macro icon(name, classModifier) %}
-  <svg role="img" class="icon {{ classModifier}}">
-    <use xlink:href="assets/icons/icons.svg#{{ name }}"></use>
-  </svg>
+<svg role="img" class="icon {{ classModifier}}">
+	<use xlink:href="assets/icons/icons.svg#{{ name }}"></use>
+</svg>
 {% endmacro %}
 
+
+{% macro social(classModifier, shareFlag) %}
+<div class="social {{ classModifier }}">
+	<ul>
+		<li class="social__item social__item--twitter"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#twitter"></use>
+			</svg>
+			{% if shareFlag %}<span>Share</span>{% endif %}
+			
+		</a></li>
+		<li class="social__item social__item--facebook"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#facebook"></use>
+			</svg>
+				{% if shareFlag %}<span>Share</span>{% endif %}
+
+		</a></li>
+		<li class="social__item social__item--linkedin"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#linkedin"></use>
+			</svg>
+				{% if shareFlag %}<span>Share</span>{% endif %}
+
+		</a></li>
+		<li class="social__item social__item--instagram"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#instagram"></use>
+			</svg>
+				{% if shareFlag %}<span>Share</span>{% endif %}
+
+		</a></li>
+	</ul>
+</div>
+{% endmacro %}
 
 
 

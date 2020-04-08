@@ -46,25 +46,6 @@
 		margin-bottom: 30px;
 	}
 
-	.social-links {
-
-		li {
-			display: inline-block;
-			margin-right: 13px;
-			margin-left: 13px;
-
-				@include max-screen(480px) {
-
-					margin-right: 5px;
-					margin-left: 5px;
-
-					img {
-						width: 40px;
-					}
-				}
-		}
-
-	}
 
 
 	form {
