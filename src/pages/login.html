@@ -1,9 +1,8 @@
 {% extends "layouts/default.html" %}
 
-{% set title = "Register" %}
-{% set page = "register" %}
-{% set register = true %}
-
+{% set login = true %}
+{% set pagetitle = "LogIn" %}
+{% set bodyClass = "login" %}
 
 {% block content %}
 {% include "./components/header.html" -%}
@@ -13,39 +12,32 @@
     <section class="login-wrap">
         <div class="container">
             <div class="login-form">
-                <h1>Sign up</h1>
-               
+                <h1>Log in</h1>
+
                 {{ allMacros.social() }}
 
                 <h2>or</h2>
 
                 <form>
                     <div class="row gutter-30">
-                        <div class="col-lg-6">
-                            <input class="input" type="text" placeholder="First name">
-                        </div>
-                        <div class="col-lg-6">
-                            <input class="input" type="text" placeholder="Last name">
-                        </div>
                         <div class="col-lg-12">
                             <input class="input" type="email" placeholder="Email">
                         </div>
                         <div class="col-lg-12">
                             <input class="input" type="password" placeholder="Password">
-                        </div>
-                        <div class="col-lg-12">
-                            <input class="input" type="password" placeholder="Password confirmation">
+                            <a href="reset-password.html" class="text-right block forgot-pass">Forgot your password?</a>
                         </div>
                     </div>
-                    <button class="btn btn--primary" type="submit">sign up</button>
+                    <button class="btn btn--primary" type="submit">Log in</button>
                 </form>
-                <span>Already have an account? <a href="login.html">Login</a></span>
+                <span>Don't have an account yet? <a href="register.html">Sign up</a></span>
                 <a class="logo text-right block"><img src="assets/img/logo.png"></a>
             </div>
         </div>
     </section>
 
 </main>
+
 {% include "./components/footer.html" -%}
 
 {% endblock %}

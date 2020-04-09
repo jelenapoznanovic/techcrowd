@@ -51,8 +51,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li {% if group %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
-                    <a class="nav-link" href="group.html">about</a>
+                <li {% if about %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
+                    <a class="nav-link" href="about.html">about</a>
                     
                 </li>
 
@@ -65,17 +65,19 @@
                 <li {% if blog %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
                   <a class="nav-link" href="blog.html">blog</a>
                 </li>
-                <li {% if login %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
-                    <a class="nav-link" href="log-in.html">log in</a>
-                </li>
-                <li {% if register %}class="nav-item active"{% else %} class="nav-item"{% endif %}>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    user
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="nav-link" href="login.html">log in</a>
                     <a class="nav-link" href="register.html">register</a>
+                  </div>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     education
                   </a>
-
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="nav-link" href="faq.html">faq</a>
                     <a class="nav-link" href="faq2.html">pricing</a>
