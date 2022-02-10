@@ -27,7 +27,7 @@
   "dependencies": {
     "blueprint-css": "*",
     "bootstrap": "^4.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
